@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Vehicles | AutoCare</title><link rel="stylesheet" href="css/style.css"></head>
+<body><div class="app-shell"><aside class="sidebar">
+<a class="brand" href="dashboard.html"><span>🚗</span> AutoCare</a><nav>
+<a href="dashboard.html">▦ <span>Dashboard</span></a><a class="active" href="vehicles.html">🚘 <span>My Vehicles</span></a>
+<a href="service-history.html">🔧 <span>Service History</span></a><a href="reminders.html">⏰ <span>Reminders</span></a>
+<a href="expenses.html">💰 <span>Expenses</span></a><a href="service-centers.html">📍 <span>Service Centers</span></a><a href="reports.html">📊 <span>Reports</span></a>
+</nav><button class="sidebar-logout" id="logoutBtn">↪ Logout</button></aside>
+<main class="main-content"><header class="mobile-header"><button id="menuBtn">☰</button><span class="brand">🚗 AutoCare</span></header>
+<div class="page-head"><div><span class="eyebrow">GARAGE</span><h1>My Vehicles</h1><p>Add and manage all your vehicles.</p></div><button class="btn btn-primary" id="addVehicleBtn">+ Add Vehicle</button></div>
+<div id="vehicleGrid" class="vehicle-grid"></div>
+<div id="emptyVehicles" class="empty-state hidden"><div>🚘</div><h2>No vehicles added</h2><p>Add your first vehicle to start tracking maintenance.</p><button class="btn btn-primary" id="emptyAdd">+ Add Vehicle</button></div>
+</main></div>
+<div class="modal" id="vehicleModal"><div class="modal-card"><div class="modal-head"><h2 id="vehicleModalTitle">Add Vehicle</h2><button class="close" data-close>×</button></div>
+<form id="vehicleForm"><input type="hidden" id="vehicleId">
+<div class="form-grid"><div><label>Vehicle Name</label><input id="vehicleName" placeholder="e.g. Honda City" required></div>
+<div><label>Registration Number</label><input id="vehicleNumber" placeholder="e.g. TN 01 AB 1234" required></div>
+<div><label>Brand</label><input id="vehicleBrand" placeholder="e.g. Honda" required></div>
+<div><label>Model</label><input id="vehicleModel" placeholder="e.g. City" required></div>
+<div><label>Year</label><input id="vehicleYear" type="number" min="1900" max="2100" required></div>
+<div><label>Fuel Type</label><select id="vehicleFuel"><option>Petrol</option><option>Diesel</option><option>Electric</option><option>Hybrid</option><option>CNG</option></select></div>
+<div><label>Current Mileage (km)</label><input id="vehicleMileage" type="number" min="0" value="0" required></div>
+<div><label>Insurance Expiry</label><input id="vehicleInsurance" type="date"></div></div>
+<div class="modal-actions"><button type="button" class="btn btn-light" data-close>Cancel</button><button class="btn btn-primary" type="submit">Save Vehicle</button></div>
+</form></div></div>
+<script src="js/app.js"></script><script src="js/vehicles.js"></script></body></html>

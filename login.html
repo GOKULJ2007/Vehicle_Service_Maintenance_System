@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login | AutoCare</title><link rel="stylesheet" href="css/style.css">
+</head>
+<body class="auth-page">
+<div class="auth-card">
+  <a class="brand centered" href="index.html"><span>🚗</span> AutoCare</a>
+  <h1>Welcome back</h1>
+  <p class="muted">Sign in to manage your vehicles.</p>
+  <form id="loginForm">
+    <label>Email</label><input id="loginEmail" type="email" placeholder="you@example.com" required>
+    <label>Password</label><input id="loginPassword" type="password" placeholder="Enter password" required minlength="4">
+    <button class="btn btn-primary full" type="submit">Login</button>
+    <div id="loginMsg" class="form-msg"></div>
+  </form>
+  <p class="auth-note">Demo: enter any valid email and password (4+ characters).</p>
+  <a href="index.html" class="back-link">← Back to home</a>
+</div>
+<script src="js/auth.js"></script>
+</body>
+</html>
